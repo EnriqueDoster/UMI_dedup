@@ -27,7 +27,7 @@ if __name__ == "__main__":
         print("outdir path doesn't exist. trying to make")
         os.makedirs(args.output)
     print(args.forward.split('/')[-1].split('_')[0])
-    samplename = str(args.forward.split('/')[-1].split('_')[0])
+    samplename = str(args.forward.split('/')[-1].split('_R1')[0])
     print(samplename)
     with open(args.output + '/' + samplename + '_SLURM_script.sh', 'w') as fout:
         ## First, write the SBATCH information
